@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARIS -- Maritime AI Security Response</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section id="login-view" class="login-wrap">
+    <div class="login-card">
+      <div class="brand">
+        <span class="brand-mark">◆</span>
+        <div>
+          <h1>MARIS</h1>
+          <p>Maritime AI Security Response</p>
+        </div>
+      </div>
+      <form id="login-form" autocomplete="off">
+        <label>Vessel ID</label>
+        <input id="vessel-input" type="text" placeholder="OCEAN07" required />
+        <label>Password</label>
+        <input id="password-input" type="password" placeholder="••••••••" required />
+        <button type="submit">AUTHENTICATE VESSEL</button>
+        <p id="login-error" class="error hidden">Invalid Vessel ID or Password.</p>
+      </form>
+      <p class="hint">Demo: OCEAN07 / MARIS07 &nbsp;·&nbsp; OCEAN12 / MARIS12 &nbsp;·&nbsp; OCEAN21 / MARIS21</p>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard-view" class="hidden">
+    <header class="topbar">
+      <div class="brand small">
+        <span class="brand-mark">◆</span>
+        <strong>MARIS</strong>
+        <span class="tag">SECURITY OPERATIONS</span>
+      </div>
+      <div class="topbar-right">
+        <span class="vessel-badge">VESSEL: <strong id="current-vessel">--</strong></span>
+        <button id="logout-btn" class="ghost">Logout</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- Incident list -->
+      <div class="panel">
+        <div class="panel-head">ACTIVE INCIDENTS</div>
+        <div id="incident-list" class="incident-list"></div>
+      </div>
+
+      <!-- Investigation -->
+      <div class="panel wide">
+        <div class="panel-head">
+          INVESTIGATION
+          <button id="run-btn" class="run" disabled>RUN INVESTIGATION</button>
+        </div>
+        <div id="investigation" class="investigation">
+          <p class="placeholder">Select an incident, then click Run Investigation.</p>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

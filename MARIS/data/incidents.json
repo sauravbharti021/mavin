@@ -1,0 +1,187 @@
+{
+  "incidents": [
+    {
+      "incident_id": "INC-1047",
+      "vessel_id": "OCEAN07",
+      "timestamp": "2026-09-29T02:14:33Z",
+      "incident_type": "Unknown Device",
+      "description": "An unrecognized device connected to the vessel network shortly after multiple failed authentication attempts, followed by a sharp rise in outbound traffic.",
+      "affected_system": "Vessel Network",
+      "severity": "HIGH",
+      "indicators": {
+        "failed_logins": 5,
+        "unknown_device": true,
+        "unknown_device_mac": "9A:2F:11:04:C7:D8",
+        "traffic_increase_pct": 187,
+        "suspicious_outbound": true,
+        "suspicious_destination": "185.220.101.47:8443",
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-1052",
+      "vessel_id": "OCEAN07",
+      "timestamp": "2026-09-29T09:41:10Z",
+      "incident_type": "Multiple Failed Logins",
+      "description": "Repeated failed login attempts against the engine control console from a single workstation over a short window.",
+      "affected_system": "Engine Control Console",
+      "severity": "MEDIUM",
+      "indicators": {
+        "failed_logins": 12,
+        "unknown_device": false,
+        "traffic_increase_pct": 8,
+        "suspicious_outbound": false,
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-1055",
+      "vessel_id": "OCEAN07",
+      "timestamp": "2026-09-29T13:05:52Z",
+      "incident_type": "Abnormal Network Traffic",
+      "description": "Navigation subsystem showed a moderate, sustained increase in internal traffic with no external destinations involved.",
+      "affected_system": "Navigation System",
+      "severity": "LOW",
+      "indicators": {
+        "failed_logins": 0,
+        "unknown_device": false,
+        "traffic_increase_pct": 34,
+        "suspicious_outbound": false,
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-1061",
+      "vessel_id": "OCEAN07",
+      "timestamp": "2026-09-30T01:22:07Z",
+      "incident_type": "Suspicious Outbound Connection",
+      "description": "A cargo management host opened a persistent outbound connection to a known malicious hosting range during off-hours.",
+      "affected_system": "Cargo Management",
+      "severity": "HIGH",
+      "indicators": {
+        "failed_logins": 2,
+        "unknown_device": false,
+        "traffic_increase_pct": 96,
+        "suspicious_outbound": true,
+        "suspicious_destination": "45.133.216.12:443",
+        "port_scan_detected": true
+      }
+    },
+    {
+      "incident_id": "INC-2033",
+      "vessel_id": "OCEAN12",
+      "timestamp": "2026-09-29T06:18:44Z",
+      "incident_type": "Unauthorized Access Attempt",
+      "description": "An unknown device attempted to authenticate to the bridge systems multiple times and probed several internal ports.",
+      "affected_system": "Bridge Systems",
+      "severity": "HIGH",
+      "indicators": {
+        "failed_logins": 7,
+        "unknown_device": true,
+        "unknown_device_mac": "3C:8D:20:6E:11:AF",
+        "traffic_increase_pct": 42,
+        "suspicious_outbound": false,
+        "port_scan_detected": true
+      }
+    },
+    {
+      "incident_id": "INC-2041",
+      "vessel_id": "OCEAN12",
+      "timestamp": "2026-09-29T15:52:19Z",
+      "incident_type": "Abnormal Network Traffic",
+      "description": "Ballast control network reported elevated traffic volume consistent with a misconfigured backup job.",
+      "affected_system": "Ballast Control",
+      "severity": "LOW",
+      "indicators": {
+        "failed_logins": 0,
+        "unknown_device": false,
+        "traffic_increase_pct": 51,
+        "suspicious_outbound": false,
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-2048",
+      "vessel_id": "OCEAN12",
+      "timestamp": "2026-09-30T03:37:55Z",
+      "incident_type": "Multiple Failed Logins",
+      "description": "Several failed logins were recorded against the crew management portal from a recognized on-vessel device.",
+      "affected_system": "Crew Management Portal",
+      "severity": "MEDIUM",
+      "indicators": {
+        "failed_logins": 9,
+        "unknown_device": false,
+        "traffic_increase_pct": 3,
+        "suspicious_outbound": false,
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-2050",
+      "vessel_id": "OCEAN12",
+      "timestamp": "2026-09-30T08:09:31Z",
+      "incident_type": "Suspicious Outbound Connection",
+      "description": "A monitoring node briefly beaconed to an external address, then returned to normal after the session was reset.",
+      "affected_system": "Environmental Monitoring",
+      "severity": "MEDIUM",
+      "indicators": {
+        "failed_logins": 1,
+        "unknown_device": false,
+        "traffic_increase_pct": 63,
+        "suspicious_outbound": true,
+        "suspicious_destination": "91.219.238.7:53",
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-3012",
+      "vessel_id": "OCEAN21",
+      "timestamp": "2026-09-29T04:47:02Z",
+      "incident_type": "Unknown Device",
+      "description": "An unknown device connected to the fuel systems VLAN, generated a large traffic spike, and opened a suspicious outbound tunnel.",
+      "affected_system": "Fuel Systems",
+      "severity": "HIGH",
+      "indicators": {
+        "failed_logins": 4,
+        "unknown_device": true,
+        "unknown_device_mac": "D0:57:8E:32:9B:6C",
+        "traffic_increase_pct": 213,
+        "suspicious_outbound": true,
+        "suspicious_destination": "193.201.224.19:4444",
+        "port_scan_detected": true
+      }
+    },
+    {
+      "incident_id": "INC-3019",
+      "vessel_id": "OCEAN21",
+      "timestamp": "2026-09-29T18:26:40Z",
+      "incident_type": "Abnormal Network Traffic",
+      "description": "Communications relay showed a small traffic deviation during a scheduled satellite handover.",
+      "affected_system": "Communications Relay",
+      "severity": "LOW",
+      "indicators": {
+        "failed_logins": 0,
+        "unknown_device": false,
+        "traffic_increase_pct": 19,
+        "suspicious_outbound": false,
+        "port_scan_detected": false
+      }
+    },
+    {
+      "incident_id": "INC-3024",
+      "vessel_id": "OCEAN21",
+      "timestamp": "2026-09-30T11:03:16Z",
+      "incident_type": "Unauthorized Access Attempt",
+      "description": "Repeated failed logins against the cargo hold sensor gateway coincided with an internal port scan from the same source.",
+      "affected_system": "Cargo Hold Sensors",
+      "severity": "MEDIUM",
+      "indicators": {
+        "failed_logins": 15,
+        "unknown_device": false,
+        "traffic_increase_pct": 22,
+        "suspicious_outbound": false,
+        "port_scan_detected": true
+      }
+    }
+  ]
+}
